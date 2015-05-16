@@ -1,6 +1,6 @@
 /*** @jsx React.DOM */
 userId = "nicolsondsouza";
-var followListReact = new React.createClass({
+var FollowListReact = new React.createClass({
 	getInitialState: function(){
 		// var follow = [];
 		// var user = Session.get("inbox");
@@ -43,7 +43,7 @@ var followListReact = new React.createClass({
 	"render": function(){
 		var self = this;	
 		followlist = this.state.follow.map(function(follow){
-			return <followReact follow={follow} onClickFollow={self.onClickFollow}/>
+			return <FollowReact follow={follow} onClickFollow={self.onClickFollow}/>
 		})
 		return( 
 			<div className="ui tiny images">
@@ -53,9 +53,9 @@ var followListReact = new React.createClass({
 		
 	}
 });
-Follow.followListReact = followListReact;
+Follow.FollowListReact = FollowListReact;
 
-var followReact = new React.createClass({
+var FollowReact = new React.createClass({
 	"onClickFollow": function(){
 		this.props.onClickFollow(this.props.follow);
 		Session.set("sender",this.props.follow);
@@ -69,8 +69,8 @@ var followReact = new React.createClass({
 			)
 	}
 });
-Follow.followReact = followReact;
+Follow.FollowReact = FollowReact;
 
 Template.followPackage.rendered = function(){
-	React.renderComponent(<followListReact />, document.getElementById('followPackage'))
+	React.renderComponent(<FollowListReact />, document.getElementById('followPackage'))
 }

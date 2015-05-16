@@ -14,7 +14,7 @@ Package.on_use(function (api) {
     'deps',
     'tracker',
     'session',
-    'pedrohenriquerls:reactjs',
+    'reactjs:react',
     ], ['client', 'server']);
 
   // like Document W will be an extended coll..
@@ -57,7 +57,7 @@ Package.on_test(function (api) {
       'deps',
       'tracker',
       'session',
-      'pedrohenriquerls:reactjs',
+      'reactjs:react',
     
       'underscore',
       'ground:db',
@@ -72,7 +72,7 @@ Package.on_test(function (api) {
       'accounts-password', 
       'underscore', 
       'random', 
-      'pedrohenriquerls:reactjs',
+      'reactjs:react',
       'mongo',
       'youiest:unionize'
     ], 
