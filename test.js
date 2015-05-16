@@ -44,7 +44,7 @@ if(Meteor.isClient){
 		
 		// Session.set("imageId",DummyData._id);
 		// setTimeout(function(){
-		var DomElement = React.renderComponentToString(Follow.followListReact(null))
+		var DomElement = React.renderComponentToString(Follow.FollowListReact(null))
 		// console.log(DomElement.match("DM4ZEp8")[0])
 		test.equal(DomElement.match("dZE9CXY")[0],"dZE9CXY", "didn't found image");
 		// if(next)
